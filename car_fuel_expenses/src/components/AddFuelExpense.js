@@ -3,24 +3,27 @@ import React, { useState } from "react";
 
 export const AddFuelExpense = () => {
 
-    const [text, setText] = useState('');
-    const [amount, setAmount] = useState('');
+    const [car, setCar] = useState('');
+    const [fuelInLitres, setFuel] = useState('');
+    const [fuelPriceInEuros, setPrice] = useState('');
 
     return (
         <>
-        <h3>Add new transaction</h3>
+        <h3>Add new refueling expense</h3>
         <form>
             <div className="form-control">
-                <label htmlFor="text">Text</label>
-                <input type="text" value={text} onChange={(e) => setText(e.target.value)} placeholder="Enter text..." />
+                <label htmlFor="text">Car Name</label>
+                <input type="text" value={car} onChange={(e) => setCar(e.target.value)} placeholder="Enter car name..." />
             </div>
             <div className="form-control">
-                <label htmlFor="amount">Amount <br/>
-                    (negative - expense, positive - income)
-                </label>
-                <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} placeholder="Enter amount..." />
+                <label htmlFor="amount">Quantity in litres</label>
+                <input type="number" value={fuelInLitres} onChange={(e) => setFuel(e.target.value)} placeholder="Enter fuel in litres..." />
             </div>
-            <button className="btn">Add transaction</button>
+            <div>
+                <label htmlFor="fuelPrice"> Fuel Price</label>
+                <input type="text" value={fuelPriceInEuros} onChange={(e) => setPrice(e.target.value)} placeholder="Enter fuel price in euros" ></input>
+            </div>
+            <button className="btn">Add Refueling Expense</button>
         </form>
         </>
     )

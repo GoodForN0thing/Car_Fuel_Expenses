@@ -2,7 +2,7 @@ import './App.css';
 import { Header } from './components/Header';
 import { Balance } from './components/Balance';
 import { Expenses } from './components/Expenses';
-import { TransactionList } from './components/TransactionList';
+import { RefuelingList } from './components/RefuelingList';
 import { AddFuelExpense } from './components/AddFuelExpense';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
       <Header />
       <Balance />
       <Expenses />
-      <TransactionList />
+      <RefuelingList />
       <AddFuelExpense />
 
     </div>
