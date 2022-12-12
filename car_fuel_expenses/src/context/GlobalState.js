@@ -3,7 +3,8 @@ import AppReducer from './AppReducer.js'
 
 // initial state
 const initialState = {
-    transactions: [
+    // vidoessa transactions, tässä refuels
+    refuels: [
         { id: 1, text: 'Flower', amount: -20 },
         { id: 2, text: 'Salary', amount: 300 },
         { id: 3, text: 'Book', amount: -10 },
@@ -19,7 +20,7 @@ export const GlobalProvider = ({ children }) => {
     const [state, dispatch] = useReducer(AppReducer, initialState);
 
     return ( <GlobalContext.Provider value={{
-        transactions: state.transactions
+        refuels: state.refuels
     }}>
         {children}
     </GlobalContext.Provider>);
