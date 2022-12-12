@@ -5,18 +5,20 @@ import { Expenses } from './components/Expenses';
 import { RefuelingList } from './components/RefuelingList';
 import { AddFuelExpense } from './components/AddFuelExpense';
 
+import { GlobalProvider } from './context/GlobalState';
+
 function App() {
   return (
     
-    
-    <div>
+    <GlobalProvider>
+
       <Header />
       <Balance />
       <Expenses />
       <RefuelingList />
       <AddFuelExpense />
 
-    </div>
+    </GlobalProvider>
     
   );
 }
