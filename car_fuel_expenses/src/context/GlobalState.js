@@ -19,8 +19,18 @@ export const GlobalContext = createContext(initialState);
 export const GlobalProvider = ({ children }) => {
     const [state, dispatch] = useReducer(AppReducer, initialState);
 
+    //Actions
+    function deleteRefueling(id) {
+        dispatch({
+            type: 'DELETE_REFUELING',
+            payload: id
+        })
+    }
+
+
     return ( <GlobalContext.Provider value={{
-        refuels: state.refuels
+        refuels: state.refuels,
+        deleteRefueling
     }}>
         {children}
     </GlobalContext.Provider>);
