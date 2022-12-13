@@ -9,6 +9,8 @@ export const Expenses = () => {
     const totalLitres = refuels.map(refuel => refuel.fuelInLitres);
     const kilometers = refuels.map(refuel => refuel.distanceInKilometres);
     const totalPrice = refuels.map(refuel => refuel.totalPrice);
+    const Elec = refuels.map(refuel => refuel.priceOfElectricity);
+    const Lataus = refuels.map(refuel => refuel.rechargeTime);
     
   
     const euros = price
@@ -31,6 +33,16 @@ export const Expenses = () => {
     .reduce((acc, item) => (acc += item), 0)
     .toFixed(2);
 
+    const sähkö = Elec
+    .filter(item => item > 0)
+    .reduce((acc, item) => (acc += item), 0)
+    .toFixed(2);
+
+    const charge = Lataus
+    .filter(item => item > 0)
+    .reduce((acc, item) => (acc += item), 0)
+    .toFixed(2);
+
     
 
 
@@ -38,7 +50,7 @@ export const Expenses = () => {
         <div className="exp-container">
         <div>
             <h4>Total expenses and consumption</h4>
-            <li><span>{sum} €</span><span>{litres} litres</span><span>{kilometrit} km</span></li>
+            <li><span>{sum} €</span><span>{litres} litres</span><span>{kilometrit} km</span><span>{sähkö} km</span><span>{charge} h</span></li>
             <p>average expenses per 100 kilometers in euros {euros * 100 / kilometrit}</p>
             <p>average consumption per 100 kilometers in liters{litres * 100 / kilometrit }</p>
         </div>

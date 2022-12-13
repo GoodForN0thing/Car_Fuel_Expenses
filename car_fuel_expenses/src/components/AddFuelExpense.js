@@ -23,7 +23,9 @@ export const AddFuelExpense = () => {
             fuelInLitres: +fuelInLitres,
             fuelPriceInEuros: +fuelPriceInEuros,
             distanceInKilometres: +distanceInKilometres,
-            totalPrice: +fuelInLitres*fuelPriceInEuros
+            totalPrice: +fuelInLitres*fuelPriceInEuros,
+            priceOfElectricity: +priceOfElectricity,
+            rechargeTime: +rechargeTime
 
         }
 
