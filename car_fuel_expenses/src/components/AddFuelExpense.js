@@ -9,6 +9,7 @@ export const AddFuelExpense = () => {
     const [fuelPriceInEuros, setPrice] = useState('');
     const [distanceInKilometres, setDistance] = useState('');
 
+
     const {addRefueling} = useContext(GlobalContext);
 
     const onSubmit = e => {
@@ -19,7 +20,9 @@ export const AddFuelExpense = () => {
             car,
             fuelInLitres: +fuelInLitres,
             fuelPriceInEuros: +fuelPriceInEuros,
-            distanceInKilometres: +distanceInKilometres,       
+            distanceInKilometres: +distanceInKilometres,
+            totalPrice: +fuelInLitres*fuelPriceInEuros
+
         }
 
         addRefueling(newRefueling);
