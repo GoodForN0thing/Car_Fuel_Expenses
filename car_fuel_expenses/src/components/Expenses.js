@@ -9,6 +9,7 @@ export const Expenses = () => {
     const totalLitres = refuels.map(refuel => refuel.fuelInLitres);
     const kilometers = refuels.map(refuel => refuel.distanceInKilometres);
     const totalPrice = refuels.map(refuel => refuel.totalPrice);
+    
   
     const euros = price
     .filter(item => item > 0)
@@ -31,11 +32,6 @@ export const Expenses = () => {
     .toFixed(2);
 
     
-  
-    // const expense = (
-    //   amounts.filter(item => item < 0).reduce((acc, item) => (acc += item), 0) *
-    //   -1
-    // ).toFixed(2);
 
 
     return (
