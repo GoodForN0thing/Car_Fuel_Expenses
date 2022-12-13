@@ -23,9 +23,9 @@ export const AddFuelExpense = () => {
             fuelInLitres: +fuelInLitres,
             fuelPriceInEuros: +fuelPriceInEuros,
             distanceInKilometres: +distanceInKilometres,
-            totalPrice: +fuelInLitres*fuelPriceInEuros,
             priceOfElectricity: +priceOfElectricity,
-            rechargeTime: +rechargeTime
+            rechargeTime: +rechargeTime,
+            totalPrice: +fuelInLitres*fuelPriceInEuros + priceOfElectricity*rechargeTime
 
         }
 
@@ -53,11 +53,11 @@ export const AddFuelExpense = () => {
                 <input type="number" value={distanceInKilometres} onChange={(e) => setDistance(e.target.value)} placeholder="Enter distance in kilometres"></input>
             </div>
             <div>
-                <label htmlFor="sähköhinta">Price of electricity</label>
+                <label htmlFor="sähköhinta">Price of electricity €/kWh</label>
                 <input type="number" value={priceOfElectricity} onChange={(e) => setElec(e.target.value)} placeholder="Enter price of electricity"></input>
             </div>
             <div>
-                <label htmlFor="Latausaika">Recharge time</label>
+                <label htmlFor="Latausaika">Recharge in kWh</label>
                 <input type="number" value={rechargeTime} onChange={(e) => setRecharge(e.target.value)} placeholder="Enter recharge time"></input>
             </div>
             

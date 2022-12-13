@@ -3,6 +3,7 @@
 }
 
 body {
+    /* text-align: center; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,6 +16,11 @@ body {
   padding: 0;
   display: flex;
   justify-content: space-between;
+}
+
+.exp-container .total-expenses {
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .list {
