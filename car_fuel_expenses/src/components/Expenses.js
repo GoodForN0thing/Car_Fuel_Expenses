@@ -43,8 +43,8 @@ export const Expenses = () => {
             <li className='total-expenses'><span>{sum} €</span></li>
             <li><span>{kilometrit} km</span><span>{litres} litres</span><span>{charge} kWh</span></li>
             
-            <p>average expenses per 100 kilometers in euros {sum * 100 / kilometrit}</p>
-            <p>average consumption per 100 kilometers in liters {litres * 100 / kilometrit }</p>
+            <p>average expenses per 100 kilometers in euros {Math.round(sum * 100 / kilometrit)}</p>
+            <p>average consumption per 100 kilometers in liters {Math.round(litres * 100 / kilometrit)}</p>
         </div>
         </div>
     )
