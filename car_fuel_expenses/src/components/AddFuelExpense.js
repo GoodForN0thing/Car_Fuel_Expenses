@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { GlobalContext } from "../context/GlobalState";
 // sama kuin AddTransaction videossa
 
 export const AddFuelExpense = () => {
@@ -8,10 +9,26 @@ export const AddFuelExpense = () => {
     const [fuelPriceInEuros, setPrice] = useState('');
     const [distanceInKilometres, setDistance] = useState('');
 
+    const {addRefueling} = useContext(GlobalContext);
+
+    const onSubmit = e => {
+        e.preventDefault();
+
+        const newRefueling = {
+            id: Math.floor(Math.random() * 100000000),
+            car,
+            fuelPriceInEuros
+            
+            
+        }
+
+        addRefueling(newRefueling);
+    }
+
     return (
         <>
         <h3>Add new refueling expense</h3>
-        <form>
+        <form onSubmit={onSubmit}>
             <div className="form-control">
                 <label htmlFor="name">Car Name</label>
                 <input type="text" value={car} onChange={(e) => setCar(e.target.value)} placeholder="Enter car name" />

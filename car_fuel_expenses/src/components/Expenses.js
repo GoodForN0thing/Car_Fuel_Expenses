@@ -1,10 +1,11 @@
 import React, {useState, useContext} from 'react'
 import { GlobalContext } from '../context/GlobalState'
 
+
 export const Expenses = () => {
     const { refuels } = useContext(GlobalContext);
 
-    const amounts = refuels.map(transaction => transaction.amount);
+    const amounts = refuels.map(refuel => refuel.amount);
 
   
     const income = amounts
