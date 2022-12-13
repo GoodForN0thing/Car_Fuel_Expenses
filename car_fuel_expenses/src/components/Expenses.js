@@ -38,7 +38,6 @@ export const Expenses = () => {
         <div>
             <h4>Expense</h4>
             <p className="money minus">eurot: {income}, litrat: {litres}, kilometrit: {kilometrit}</p>
-            {/* <p>{litres}</p> */}
         </div>
         </div>
     )
