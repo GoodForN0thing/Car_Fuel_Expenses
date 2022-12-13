@@ -18,7 +18,9 @@ export const AddFuelExpense = () => {
             id: Math.floor(Math.random() * 100000000),
             car,
             fuelInLitres: +fuelInLitres,
-            fuelPriceInEuros: +fuelPriceInEuros
+            fuelPriceInEuros: +fuelPriceInEuros,
+            distanceInKilometres: +distanceInKilometres,
+            
             
             
         }

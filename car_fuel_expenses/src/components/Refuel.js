@@ -10,7 +10,7 @@ const {deleteRefueling} = useContext(GlobalContext);
 
     return (
         <li className={refuel.amount < 0 ? 'minus' : 'plus'}>
-            { refuel.car } <span>{ refuel.fuelInLitres } litres </span><span> {refuel.fuelPriceInEuros} €</span><button onClick={() => deleteRefueling(refuel.id) } className="delete-btn">x</button>
+            { refuel.car } <span>{ refuel.fuelInLitres } litres </span> <span>{ refuel.distanceInKilometres } kilometers </span><span> {refuel.fuelPriceInEuros} €</span><button onClick={() => deleteRefueling(refuel.id) } className="delete-btn">x</button>
         </li>
     )
 }

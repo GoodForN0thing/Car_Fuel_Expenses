@@ -7,6 +7,7 @@ export const Expenses = () => {
 
     const amounts = refuels.map(refuel => refuel.fuelPriceInEuros);
     const totalLitres = refuels.map(refuel => refuel.fuelInLitres);
+    const kilometers = refuels.map(refuel => refuel.distanceInKilometres);
 
   
     const income = amounts
@@ -18,6 +19,13 @@ export const Expenses = () => {
     .filter(item => item > 0)
     .reduce((acc, item) => (acc += item), 0)
     .toFixed(2);
+
+    const kilometrit = kilometers
+    .filter(item => item > 0)
+    .reduce((acc, item) => (acc += item), 0)
+    .toFixed(2);
+
+    
   
     const expense = (
       amounts.filter(item => item < 0).reduce((acc, item) => (acc += item), 0) *
@@ -29,7 +37,7 @@ export const Expenses = () => {
         <div className="exp-container">
         <div>
             <h4>Expense</h4>
-            <p className="money minus">eurot: {income}, litrat: {litres}</p>
+            <p className="money minus">eurot: {income}, litrat: {litres}, kilometrit: {kilometrit}</p>
             {/* <p>{litres}</p> */}
         </div>
         </div>
