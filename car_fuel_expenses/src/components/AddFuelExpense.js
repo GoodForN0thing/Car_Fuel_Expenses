@@ -8,6 +8,8 @@ export const AddFuelExpense = () => {
     const [fuelInLitres, setFuel] = useState('');
     const [fuelPriceInEuros, setPrice] = useState('');
     const [distanceInKilometres, setDistance] = useState('');
+    const [priceOfElectricity, setElec] = useState('');
+    const [rechargeTime, setRecharge] = useState('');
 
 
     const {addRefueling} = useContext(GlobalContext);
@@ -48,6 +50,15 @@ export const AddFuelExpense = () => {
                 <label htmlFor="distance">Distance in kilomtres</label>
                 <input type="number" value={distanceInKilometres} onChange={(e) => setDistance(e.target.value)} placeholder="Enter distance in kilometres"></input>
             </div>
+            <div>
+                <label htmlFor="sähköhinta">Price of electricity</label>
+                <input type="number" value={priceOfElectricity} onChange={(e) => setElec(e.target.value)} placeholder="Enter price of electricity"></input>
+            </div>
+            <div>
+                <label htmlFor="Latausaika">Recharge time</label>
+                <input type="number" value={rechargeTime} onChange={(e) => setRecharge(e.target.value)} placeholder="Enter recharge time"></input>
+            </div>
+            
             <button className="btn">Add Refueling Expense</button>
         </form>
         </>
