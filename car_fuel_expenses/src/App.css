@@ -10,6 +10,13 @@ body {
     margin: 0;
 }
 
+.exp-container li {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
 .list {
     list-style-type: none;
     padding: 0;

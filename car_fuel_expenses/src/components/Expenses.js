@@ -42,7 +42,7 @@ export const Expenses = () => {
         <div className="exp-container">
         <div>
             <h4>Total expenses and consumption</h4>
-            <p>eurot: {sum}, litrat: {litres}, kilometrit: {kilometrit}</p>
+            <li><span>{sum} €</span><span>{litres} litres</span><span>{kilometrit} km</span></li>
             <p>average expenses per 100 kilometers in euros {euros * 100 / kilometrit}</p>
             <p>average consumption per 100 kilometers in liters{litres * 100 / kilometrit }</p>
         </div>
