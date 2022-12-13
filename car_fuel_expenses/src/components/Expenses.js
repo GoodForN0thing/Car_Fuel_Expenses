@@ -12,11 +12,6 @@ export const Expenses = () => {
     const Elec = refuels.map(refuel => refuel.priceOfElectricity);
     const Lataus = refuels.map(refuel => refuel.rechargeTime);
     
-  
-    const euros = price
-    .filter(item => item > 0)
-    .reduce((acc, item) => (acc += item), 0)
-    .toFixed(2);
 
     const sum = totalPrice
     .filter(item => item > 0)
@@ -29,11 +24,6 @@ export const Expenses = () => {
     .toFixed(2);
 
     const kilometrit = kilometers
-    .filter(item => item > 0)
-    .reduce((acc, item) => (acc += item), 0)
-    .toFixed(2);
-
-    const sähkö = Elec
     .filter(item => item > 0)
     .reduce((acc, item) => (acc += item), 0)
     .toFixed(2);
