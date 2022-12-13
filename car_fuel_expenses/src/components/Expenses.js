@@ -5,7 +5,7 @@ import { GlobalContext } from '../context/GlobalState'
 export const Expenses = () => {
     const { refuels } = useContext(GlobalContext);
 
-    const amounts = refuels.map(refuel => refuel.amount);
+    const amounts = refuels.map(refuel => refuel.fuelPriceInEuros);
 
   
     const income = amounts
