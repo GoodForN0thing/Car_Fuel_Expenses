@@ -13,7 +13,6 @@ function App() {
     <GlobalProvider>
 
       <Header />
-      <Balance />
       <Expenses />
       <RefuelingList />
       <AddFuelExpense />

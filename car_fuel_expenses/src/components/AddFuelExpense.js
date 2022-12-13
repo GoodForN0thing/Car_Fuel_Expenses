@@ -19,10 +19,7 @@ export const AddFuelExpense = () => {
             car,
             fuelInLitres: +fuelInLitres,
             fuelPriceInEuros: +fuelPriceInEuros,
-            distanceInKilometres: +distanceInKilometres,
-            
-            
-            
+            distanceInKilometres: +distanceInKilometres,       
         }
 
         addRefueling(newRefueling);

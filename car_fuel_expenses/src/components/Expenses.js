@@ -5,12 +5,12 @@ import { GlobalContext } from '../context/GlobalState'
 export const Expenses = () => {
     const { refuels } = useContext(GlobalContext);
 
-    const amounts = refuels.map(refuel => refuel.fuelPriceInEuros);
+    const price = refuels.map(refuel => refuel.fuelPriceInEuros);
     const totalLitres = refuels.map(refuel => refuel.fuelInLitres);
     const kilometers = refuels.map(refuel => refuel.distanceInKilometres);
 
   
-    const income = amounts
+    const euros = price
       .filter(item => item > 0)
       .reduce((acc, item) => (acc += item), 0)
       .toFixed(2);
@@ -27,17 +27,17 @@ export const Expenses = () => {
 
     
   
-    const expense = (
-      amounts.filter(item => item < 0).reduce((acc, item) => (acc += item), 0) *
-      -1
-    ).toFixed(2);
+    // const expense = (
+    //   amounts.filter(item => item < 0).reduce((acc, item) => (acc += item), 0) *
+    //   -1
+    // ).toFixed(2);
 
 
     return (
         <div className="exp-container">
         <div>
-            <h4>Expense</h4>
-            <p className="money minus">eurot: {income}, litrat: {litres}, kilometrit: {kilometrit}</p>
+            <h4>Total expenses and consumption</h4>
+            <p>eurot: {euros}, litrat: {litres}, kilometrit: {kilometrit}</p>
         </div>
         </div>
     )
