@@ -9,7 +9,11 @@ body {
     align-items: center;
     justify-content: center;
     margin: 0;
+    font-family: fantasy;
+    
 }
+
+
 
 .exp-container li {
   list-style: none;
@@ -23,21 +27,33 @@ body {
   font-size: 20px;
 }
 
+.exp-container p{
+  padding: 10px;
+    margin: 10px 0;
+    background-color: rgb(255, 0, 128);
+    border-radius: 30px;
+    border: 3px solid var(--color-shadow, black);
+    box-shadow: .5rem .5rem 0 var(--color-shadow, black);
+}
+
 .list {
     list-style-type: none;
     padding: 0;
     margin-bottom: 40px;
+    
   }
 
-.list li {
-    background-color: #fff;
+  .list li {
+    background-color: rgb(255, 0, 128);
     box-shadow: var(--box-shadow);
-    color: #333;
+    color: rgb(51, 51, 51);
     display: flex;
     justify-content: space-between;
     position: relative;
     padding: 10px;
     margin: 10px 0;
+    border-radius: 30px;
+    border: 3px solid var(--color-shadow, black);
   }
 
 .delete-btn {
@@ -57,4 +73,47 @@ body {
   }
   .list li:hover .delete-btn {
     opacity: 1;
+  }
+
+  .form-control{
+    flex-shrink: 0;
+width: 100%;
+max-width: 100%;
+margin-top: 5px;
+margin-bottom: 10px;
+  }
+
+  input{
+    width: 100%;
+    background: rgb(254, 0, 127);
+    padding: 2px 5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    border: 3px solid var(--color-shadow, black);
+    box-shadow: .5rem .5rem 0 var(--color-shadow, black);
+    
+  }
+
+
+  .btn {
+    background-color: rgb(255, 0, 128);
+    border-radius: 100px;
+    color: rgb(0, 0, 0);
+    cursor: crosshair;
+    display: inline-block;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    touch-action: manipulation;
+    box-shadow: .5rem .5rem 0 var(--color-shadow, black);
+    border: 3px solid var(--color-shadow, black);
+  }
+  
+  .btn:hover {
+    transform: scale(1.1) rotate(-5deg);
+    
   }
